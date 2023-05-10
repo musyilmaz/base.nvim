@@ -61,12 +61,15 @@ local gs = package.loaded.gitsigns
 set_keymap("n", "<leader>hs", gs.stage_hunk, opts)
 set_keymap("n", "<leader>hr", gs.reset_hunk, opts)
 set_keymap("v", "<leader>hs", function()
-	gs.stage_hunk({ vim.fn.line("."), vim.fn.line("v") })
+  gs.stage_hunk({ vim.fn.line("."), vim.fn.line("v") })
 end, opts)
 set_keymap("v", "<leader>hr", function()
-	gs.reset_hunk({ vim.fn.line("."), vim.fn.line("v") })
+  gs.reset_hunk({ vim.fn.line("."), vim.fn.line("v") })
 end, opts)
 set_keymap("n", "<leader>hS", gs.stage_buffer, opts)
 set_keymap("n", "<leader>hu", gs.undo_stage_hunk, opts)
 set_keymap("n", "<leader>hR", gs.reset_buffer, opts)
 set_keymap("n", "<leader>hp", gs.preview_hunk, opts)
+
+-- undotree
+set_keymap("n", "<leader>u", "<cmd>UndotreeToggle<cr>")

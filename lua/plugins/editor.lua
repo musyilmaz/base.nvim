@@ -36,19 +36,8 @@ return {
 	{ "famiu/bufdelete.nvim" },
 	-- comment
 	{ "numToStr/Comment.nvim" },
-	-- indent mini
-	{
-		"nvimdev/indentmini.nvim",
-		event = "BufEnter",
-		config = function()
-			require("indentmini").setup({
-				char = "|",
-				exclude = {
-					"markdown",
-				},
-			})
-
-			vim.cmd.highlight("default link IndentLine Comment")
-		end,
-	},
+	-- indent blankline
+	{ "lukas-reineke/indent-blankline.nvim" },
+	-- undotree
+	{ "mbbill/undotree" },
 }
